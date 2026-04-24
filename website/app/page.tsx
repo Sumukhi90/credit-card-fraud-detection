@@ -1,3 +1,4 @@
+import RiskChecker from '@/components/risk-checker'
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { ProblemSection } from "@/components/problem-section"
@@ -31,3 +32,6 @@ export default function Home() {
     </main>
   )
 }
+
+
+<div style={{padding:'20px'}}><RiskChecker /></div>

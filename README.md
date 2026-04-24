@@ -1,41 +1,91 @@
-# Credit Card Fraud Detection
+# 💳 Credit Card Fraud Detection
 
-## Overview
+## 📌 Problem Statement
 
-This project focuses on detecting fraudulent credit card transactions using machine learning techniques. Due to extreme class imbalance, special attention is given to recall and ROC-AUC instead of accuracy.
+Credit card fraud detection is a critical problem in financial systems due to highly imbalanced data, where fraudulent transactions represent a very small fraction of total transactions. Traditional accuracy metrics fail in such cases, making recall and ROC-AUC more important.
 
-## Dataset
+---
 
-* Source: Kaggle Credit Card Fraud Detection Dataset
-* Highly imbalanced dataset (~0.17% fraud cases)
+## 📊 Dataset
 
-## Key Steps
+* Source: Kaggle Credit Card Fraud Dataset
+* Transactions: ~284,000
+* Fraud cases: ~0.17%
 
-* Data Cleaning & Preprocessing
-* Exploratory Data Analysis (EDA)
-* Feature Engineering (Time Buckets, Amount Bands, Log Transform)
-* Model Training (Logistic Regression)
-* Evaluation using Precision, Recall, F1-score, ROC-AUC
+---
 
-## Results
+## ⚙️ Approach
 
-* ROC-AUC Score: ~0.96
-* Fraud Detection Recall: ~57%
-* Model effectively distinguishes fraud vs legitimate transactions
+### 🔹 Data Processing
 
-## Business Insights
+* Checked missing values
+* Converted target variable to integer
+* Handled class imbalance awareness
 
-* Fraud is extremely rare → accuracy is misleading
-* High recall is critical to reduce financial losses
-* Risk scoring helps prioritize high-risk transactions
+### 🔹 Feature Engineering
 
-## Tech Stack
+* Hour-based transaction buckets (Morning, Afternoon, Evening, Night)
+* Transaction amount bands (Micro, Low, Medium, High, Very High)
+* Log transformation for skewed amount distribution
+
+### 🔹 Model Used
+
+* Logistic Regression
+* StandardScaler for normalization
+
+---
+
+## 📈 Results
+
+| Metric         | Value |
+| -------------- | ----- |
+| ROC-AUC        | ~0.96 |
+| Recall (Fraud) | ~57%  |
+| Accuracy       | ~99%  |
+
+⚠️ Accuracy is misleading due to imbalance
+✅ Recall is prioritized to catch fraud cases
+
+---
+
+## 💡 Key Insights
+
+* Fraud transactions are extremely rare → imbalance problem
+* High-value transactions show higher fraud probability
+* Night-time transactions show slightly elevated risk
+* Model performs well in separating fraud vs legitimate transactions
+
+---
+
+## 🏦 Business Impact
+
+* Enables early fraud detection
+* Reduces financial losses
+* Helps prioritize high-risk transactions
+* Can be integrated into real-time fraud detection systems
+
+---
+
+## 🛠 Tech Stack
 
 * Python (Pandas, NumPy)
 * Matplotlib, Seaborn
 * Scikit-learn
 * Google Colab
 
-## Author
+---
+
+## 🚀 How to Run
+
+1. Download dataset from Kaggle
+2. Place it in your Google Drive
+3. Update path in notebook
+4. Run all cells
+
+---
+
+## 👩‍💻 Author
 
 Sumukhi Pandey
+Aspiring Data Analyst | B.Tech CSE
+GitHub: https://github.com/Sumukhi90

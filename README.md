@@ -88,4 +88,4 @@ Credit card fraud detection is a critical problem in financial systems due to hi
 
 Sumukhi Pandey
 Aspiring Data Analyst | B.Tech CSE
-GitHub: https://github.com/Sumukhi90
+GitHub: https://github.com/Sumukhi90/credit-card-fraud-detection

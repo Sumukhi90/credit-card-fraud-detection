@@ -34,4 +34,5 @@ export default function Home() {
 }
 
 
-<div style={{padding:'20px'}}><RiskChecker /></div>
+
+
